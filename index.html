@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechJeeper</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <title>Shenanigans3D - Immersive Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Import map for Three.js -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
 </head>
 <body>
-    <canvas id="particles-js"></canvas>
-    <div class="container">
-        <div class="profile">
-            <img src="https://avatars.githubusercontent.com/u/101379623?v=4" alt="TechJeeper Profile Picture">
-            <h1>TechJeeper</h1>
+    <div id="overlay">
+        <div class="header">
+            <img src="https://storage.googleapis.com/production-thangs-public/uploads/avatars/6ae1eb25-6257-4a5f-a73a-e02c8acbe9de" alt="Shenanigans3D Logo" class="logo">
+            <h1>Shenanigans3D</h1>
+            <p class="vibe">"Nothing serious, Learn from each other, Love life."</p>
         </div>
-        <div class="links">
-            <a href="https://techjeeper.com" target="_blank"><i class="ph ph-house"></i> Home Page</a>
-            <a href="https://twitch.tv/techjeeper" target="_blank"><i class="ph ph-twitch-logo"></i> Twitch</a>
-            <a href="https://x.com/techjeeper" target="_blank"><i class="ph ph-x-logo"></i> X</a>
-            <a href="https://makerworld.com/techjeeper" target="_blank"><i class="ph ph-cube"></i> MakerWorld</a>
-        </div>
+        <div id="instructions">Explore the 3D space. Click on the cubes to visit links.</div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="js/script.js"></script>
+    <canvas id="bg"></canvas>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
